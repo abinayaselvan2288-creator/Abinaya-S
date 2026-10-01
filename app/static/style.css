@@ -1,0 +1,516 @@
+* {
+    box-sizing: border-box;
+}
+
+
+body {
+
+    margin: 0;
+
+    font-family:
+        Inter,
+        system-ui,
+        Arial,
+        sans-serif;
+
+    background: #f7f7fb;
+
+    color: #17171c;
+}
+
+
+/* =====================================================
+   NAVBAR
+===================================================== */
+
+nav {
+
+    height: 68px;
+
+    padding: 0 6%;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    background: white;
+
+    border-bottom:
+        1px solid #eeeeee;
+}
+
+
+nav a {
+
+    color: #17171c;
+
+    text-decoration: none;
+
+    font-weight: 600;
+}
+
+
+.brand {
+
+    font-size: 20px;
+
+    font-weight: 800;
+}
+
+
+/* =====================================================
+   HERO
+===================================================== */
+
+.hero {
+
+    max-width: 1100px;
+
+    margin: 70px auto;
+
+    display: grid;
+
+    grid-template-columns:
+        1.3fr 0.7fr;
+
+    gap: 50px;
+
+    padding: 0 24px;
+
+    align-items: center;
+}
+
+
+.hero h1 {
+
+    font-size: 64px;
+
+    line-height: 1.02;
+
+    margin: 18px 0;
+}
+
+
+.hero h1 span {
+
+    background:
+        linear-gradient(
+            90deg,
+            #6d4aff,
+            #e84ca8
+        );
+
+    -webkit-background-clip: text;
+
+    color: transparent;
+}
+
+
+.hero p {
+
+    font-size: 18px;
+
+    color: #666;
+
+    max-width: 650px;
+
+    line-height: 1.7;
+}
+
+
+.pill {
+
+    font-size: 12px;
+
+    font-weight: 800;
+
+    letter-spacing: 1.5px;
+
+    color: #6d4aff;
+}
+
+
+/* =====================================================
+   BUTTON
+===================================================== */
+
+.btn,
+button {
+
+    display: inline-block;
+
+    border: 0;
+
+    background: #17171c;
+
+    color: white;
+
+    padding: 13px 20px;
+
+    border-radius: 12px;
+
+    font-weight: 700;
+
+    cursor: pointer;
+
+    text-decoration: none;
+}
+
+
+button:hover,
+.btn:hover {
+
+    opacity: 0.88;
+}
+
+
+/* =====================================================
+   HERO CARD
+===================================================== */
+
+.hero-card {
+
+    background: white;
+
+    padding: 36px;
+
+    border-radius: 28px;
+
+    box-shadow:
+        0 20px 60px #dddddd;
+}
+
+
+.orb {
+
+    width: 80px;
+
+    height: 80px;
+
+    border-radius: 50%;
+
+    display: grid;
+
+    place-items: center;
+
+    background: #17171c;
+
+    color: white;
+
+    font-size: 38px;
+}
+
+
+/* =====================================================
+   FEATURES
+===================================================== */
+
+.features {
+
+    max-width: 1100px;
+
+    margin: 0 auto 80px;
+
+    padding: 0 24px;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 18px;
+}
+
+
+.features div {
+
+    background: white;
+
+    border:
+        1px solid #ececf2;
+
+    border-radius: 20px;
+
+    padding: 24px;
+}
+
+
+.features p {
+
+    color: #666;
+
+    line-height: 1.6;
+}
+
+
+/* =====================================================
+   CONTAINER
+===================================================== */
+
+.container {
+
+    max-width: 1000px;
+
+    margin: 40px auto;
+
+    padding: 0 18px;
+}
+
+
+/* =====================================================
+   PANEL
+===================================================== */
+
+.panel {
+
+    background: white;
+
+    border:
+        1px solid #ececf2;
+
+    border-radius: 20px;
+
+    padding: 24px;
+
+    margin-bottom: 20px;
+}
+
+
+/* =====================================================
+   GRID
+===================================================== */
+
+.grid2 {
+
+    display: grid;
+
+    grid-template-columns:
+        1fr 1fr;
+
+    gap: 24px;
+}
+
+
+/* =====================================================
+   FORMS
+===================================================== */
+
+form {
+
+    display: grid;
+
+    gap: 12px;
+}
+
+
+input,
+textarea {
+
+    width: 100%;
+
+    padding: 13px;
+
+    border:
+        1px solid #dddddd;
+
+    border-radius: 10px;
+
+    font: inherit;
+
+    background: white;
+}
+
+
+textarea {
+
+    min-height: 90px;
+
+    resize: vertical;
+}
+
+
+input:focus,
+textarea:focus {
+
+    outline: 2px solid #cfc7ff;
+
+    border-color: #6d4aff;
+}
+
+
+/* =====================================================
+   TABS
+===================================================== */
+
+.tabs {
+
+    display: flex;
+
+    gap: 8px;
+
+    flex-wrap: wrap;
+
+    margin-bottom: 18px;
+}
+
+
+.tabs button {
+
+    background: #e9e9ef;
+
+    color: #222;
+}
+
+
+/* =====================================================
+   HIDDEN
+===================================================== */
+
+.hidden {
+
+    display: none !important;
+}
+
+
+/* =====================================================
+   RESULTS
+===================================================== */
+
+#result {
+
+    margin-top: 20px;
+}
+
+
+.result-card {
+
+    background: white;
+
+    border:
+        1px solid #dddddd;
+
+    border-radius: 20px;
+
+    padding: 24px;
+}
+
+
+.status {
+
+    padding: 12px;
+
+    border-radius: 10px;
+
+    background: #f1f1f5;
+
+    margin: 10px 0;
+}
+
+
+/* =====================================================
+   ALLOCATION
+===================================================== */
+
+.alloc {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(
+            auto-fit,
+            minmax(160px, 1fr)
+        );
+
+    gap: 10px;
+}
+
+
+.alloc div {
+
+    background: #f4f3ff;
+
+    padding: 12px;
+
+    border-radius: 12px;
+}
+
+
+/* =====================================================
+   RECOMMENDATIONS
+===================================================== */
+
+.recommendations {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(
+            auto-fit,
+            minmax(220px, 1fr)
+        );
+
+    gap: 14px;
+
+    margin-top: 18px;
+}
+
+
+.rec {
+
+    border:
+        1px solid #eeeeee;
+
+    padding: 16px;
+
+    border-radius: 15px;
+
+    background: white;
+}
+
+
+.rec a {
+
+    color: #6d4aff;
+
+    font-weight: 700;
+
+    text-decoration: none;
+}
+
+
+.rec p {
+
+    color: #666;
+
+    line-height: 1.5;
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media (max-width: 750px) {
+
+    .hero {
+
+        grid-template-columns: 1fr;
+
+        margin: 40px auto;
+    }
+
+
+    .hero h1 {
+
+        font-size: 44px;
+    }
+
+
+    .features,
+    .grid2 {
+
+        grid-template-columns: 1fr;
+    }
+}

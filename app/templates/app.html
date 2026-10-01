@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>
+        PocketSmart AI Planner
+    </title>
+
+    <link
+        rel="stylesheet"
+        href="/static/style.css"
+    >
+
+</head>
+
+
+<body>
+
+
+<!-- =====================================================
+     NAVBAR
+====================================================== -->
+
+<nav>
+
+    <a href="/">
+        ← PocketSmart
+    </a>
+
+
+    <div id="userNav"></div>
+
+</nav>
+
+
+<main class="container">
+
+
+<!-- =====================================================
+     AUTHENTICATION
+====================================================== -->
+
+<div
+    id="auth"
+    class="panel"
+>
+
+    <h2>
+        Welcome to PocketSmart AI
+    </h2>
+
+
+    <p>
+
+        Create an account or login
+        to save your plans.
+
+    </p>
+
+
+    <div class="grid2">
+
+
+        <!-- REGISTER -->
+
+        <form id="registerForm">
+
+            <h3>
+                Register
+            </h3>
+
+
+            <input
+                name="name"
+                placeholder="Name"
+                required
+            >
+
+
+            <input
+                name="email"
+                type="email"
+                placeholder="Email"
+                required
+            >
+
+
+            <input
+                name="password"
+                type="password"
+                placeholder="Password (6+ characters)"
+                required
+            >
+
+
+            <button>
+                Register
+            </button>
+
+        </form>
+
+
+        <!-- LOGIN -->
+
+        <form id="loginForm">
+
+            <h3>
+                Login
+            </h3>
+
+
+            <input
+                name="email"
+                type="email"
+                placeholder="Email"
+                required
+            >
+
+
+            <input
+                name="password"
+                type="password"
+                placeholder="Password"
+                required
+            >
+
+
+            <button>
+                Login
+            </button>
+
+        </form>
+
+    </div>
+
+</div>
+
+
+<!-- =====================================================
+     PLANNER
+====================================================== -->
+
+<div
+    id="planner"
+    class="hidden"
+>
+
+
+    <!-- TABS -->
+
+    <div class="tabs">
+
+        <button data-tab="home">
+            🏠 Home
+        </button>
+
+
+        <button data-tab="party">
+            🎉 Party
+        </button>
+
+
+        <button data-tab="jewelry">
+            💎 Jewelry
+        </button>
+
+
+        <button data-tab="history">
+            🕘 History
+        </button>
+
+    </div>
+
+
+    <!-- =================================================
+         HOME
+    ================================================== -->
+
+    <section
+        id="home"
+        class="tab panel"
+    >
+
+        <h2>
+            Home Interior Planner
+        </h2>
+
+
+        <form id="homeForm">
+
+            <input
+                name="budget"
+                type="number"
+                min="1"
+                placeholder="Budget in ₹"
+                required
+            >
+
+
+            <input
+                name="rooms"
+                placeholder="Rooms — Living Room, Bedroom"
+            >
+
+
+            <input
+                name="style"
+                placeholder="Style"
+                value="Modern"
+            >
+
+
+            <input
+                name="items"
+                placeholder="Items — fan, dining table, lights"
+            >
+
+
+            <textarea
+                name="priorities"
+                placeholder="Priorities"
+            >value for money</textarea>
+
+
+            <button>
+                Generate Home Plan
+            </button>
+
+        </form>
+
+    </section>
+
+
+    <!-- =================================================
+         PARTY
+    ================================================== -->
+
+    <section
+        id="party"
+        class="tab panel hidden"
+    >
+
+        <h2>
+            Party Budget Planner
+        </h2>
+
+
+        <form id="partyForm">
+
+            <input
+                name="budget"
+                type="number"
+                min="1"
+                placeholder="Total budget ₹"
+                required
+            >
+
+
+            <input
+                name="guests"
+                type="number"
+                min="1"
+                placeholder="Guest count"
+                required
+            >
+
+
+            <input
+                name="event_type"
+                placeholder="Birthday, Wedding, Corporate"
+                required
+            >
+
+
+            <input
+                name="venue_city"
+                placeholder="City / Area"
+            >
+
+
+            <input
+                name="food_preference"
+                placeholder="Food preference"
+                value="mixed"
+            >
+
+
+            <input
+                name="decoration_style"
+                placeholder="Decoration style"
+                value="simple"
+            >
+
+
+            <textarea
+                name="priorities"
+            >value for money</textarea>
+
+
+            <button>
+                Generate Party Plan
+            </button>
+
+        </form>
+
+    </section>
+
+
+    <!-- =================================================
+         JEWELRY
+    ================================================== -->
+
+    <section
+        id="jewelry"
+        class="tab panel hidden"
+    >
+
+        <h2>
+            Jewelry Budget Planner
+        </h2>
+
+
+        <form
+            id="jewelryForm"
+            enctype="multipart/form-data"
+        >
+
+            <input
+                name="budget"
+                type="number"
+                min="1"
+                placeholder="Jewelry budget ₹"
+                required
+            >
+
+
+            <input
+                name="occasion"
+                placeholder="Occasion"
+                required
+            >
+
+
+            <input
+                name="style"
+                placeholder="Style"
+                value="Elegant"
+            >
+
+
+            <input
+                name="outfit_color"
+                placeholder="Outfit color"
+            >
+
+
+            <textarea
+                name="outfit_description"
+                placeholder="Outfit description"
+            ></textarea>
+
+
+            <label>
+
+                Optional outfit image
+
+                <input
+                    name="outfit_image"
+                    type="file"
+                    accept="image/png,image/jpeg,image/webp"
+                >
+
+            </label>
+
+
+            <button>
+                Generate Jewelry Plan
+            </button>
+
+        </form>
+
+    </section>
+
+
+    <!-- =================================================
+         HISTORY
+    ================================================== -->
+
+    <section
+        id="history"
+        class="tab panel hidden"
+    >
+
+        <h2>
+            Recommendation History
+        </h2>
+
+
+        <div id="historyList"></div>
+
+    </section>
+
+
+    <!-- =================================================
+         RESULT
+    ================================================== -->
+
+    <div id="result"></div>
+
+
+</div>
+
+
+</main>
+
+
+<script src="/static/app.js"></script>
+
+</body>
+
+</html>
